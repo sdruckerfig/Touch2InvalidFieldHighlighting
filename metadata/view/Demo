@@ -1,0 +1,149 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "fieldDefaults": [
+            "{\"labelWidth\":80}"
+        ],
+        "designer|userClassName": "Demo",
+        "designer|initialView": true
+    },
+    "designerId": "5fc0b39b-a171-43f5-a49a-2aa9a2fd704b",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "fieldDefaults",
+            "type": "object"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Form Validation Example"
+            },
+            "designerId": "4b00ff0b-850d-4984-8994-0d36f993a26e"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Enter Your Name"
+            },
+            "designerId": "d8d1c72e-c765-4695-8396-3c3122e47026",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "First Name",
+                        "name": "fname",
+                        "required": true
+                    },
+                    "designerId": "66d81ad3-e650-4413-98d6-4c346d31a2b9"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Last Name",
+                        "name": "lname",
+                        "required": true
+                    },
+                    "designerId": "40336a38-e3c3-4ca9-aead-098767da13a4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|pack": "center",
+                "docked": "bottom"
+            },
+            "designerId": "323bc589-2140-446b-922e-a7316b16e805",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "Submit"
+                    },
+                    "designerId": "569054ae-745b-4960-9a3a-2cc1b6f7f97e",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "var errorString = '',",
+                                    "    form = button.up('formpanel'),",
+                                    "    fields = form.query(\"field\");",
+                                    "",
+                                    "for (var i=0; i<fields.length; i++) {",
+                                    "  fields[i].removeCls('invalidField');",
+                                    "}",
+                                    "",
+                                    "var model = Ext.create(\"MyApp.model.Person\", form.getValues());",
+                                    "",
+                                    "var errors = model.validate();",
+                                    "",
+                                    "if (!errors.isValid()) {",
+                                    " errors.each(function (errorObj){",
+                                    "   errorString += errorObj.getField() + \" \" + errorObj.getMessage() + \"<br />\";",
+                                    "   var s = Ext.String.format('field[name={0}]',errorObj.getField());",
+                                    "   form.down(s).addCls('invalidField');",
+                                    " });",
+                                    " Ext.Msg.alert('Errors in your input',errorString);",
+                                    "} else {",
+                                    "  Ext.Msg.alert(\"Data is valid\",\"Success\");   ",
+                                    "}"
+                                ]
+                            },
+                            "designerId": "4214682b-48d5-4fab-affa-c00139922e1a"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

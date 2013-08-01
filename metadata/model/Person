@@ -1,0 +1,89 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Person"
+    },
+    "designerId": "e239403b-d934-4249-b010-5ca2c00c104f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fname"
+            },
+            "designerId": "64d959ba-6106-4865-81e0-d01a8f5d72e1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "lname"
+            },
+            "designerId": "166ed181-8ed1-4ec0-a650-5378fe320159"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "fname"
+            },
+            "designerId": "ce048d2e-f802-4b16-ba91-0941fa3060ad"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "lname"
+            },
+            "designerId": "7e223823-e87c-44d9-a6e7-009e1b42b914"
+        },
+        {
+            "type": "lengthvalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "fname",
+                "max": 20,
+                "min": null
+            },
+            "designerId": "5f1ed64b-1cfb-44c8-8e32-7b0c50930956"
+        },
+        {
+            "type": "lengthvalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "lname",
+                "max": 20
+            },
+            "designerId": "9910583b-be8b-4061-82ca-75c847700e49"
+        }
+    ]
+}

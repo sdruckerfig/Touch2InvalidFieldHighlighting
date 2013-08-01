@@ -1,0 +1,64 @@
+{
+    "name": "formvalidation",
+    "settings": {
+        "urlPrefix": "http://localhost/formvalidation",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "5fc0b39b-a171-43f5-a49a-2aa9a2fd704b": {
+            "paths": [
+                "metadata/view/Demo",
+                "app/view/override/Demo.js",
+                "app/view/Demo.js"
+            ],
+            "className": "Demo"
+        },
+        "492a63e6-ce1b-48f4-a2a4-224c6a51ec7f": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "e239403b-d934-4249-b010-5ca2c00c104f": {
+            "paths": [
+                "metadata/model/Person",
+                "app/model/override/Person.js",
+                "app/model/Person.js"
+            ],
+            "className": "Person"
+        },
+        "b57c8692-c87f-4729-9375-6ddb83c108d8": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "5fc0b39b-a171-43f5-a49a-2aa9a2fd704b"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [
+            "e239403b-d934-4249-b010-5ca2c00c104f"
+        ],
+        "resource": [
+            "492a63e6-ce1b-48f4-a2a4-224c6a51ec7f",
+            "b57c8692-c87f-4729-9375-6ddb83c108d8"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
